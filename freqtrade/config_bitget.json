@@ -1,0 +1,123 @@
+{
+    "$schema": "https://schema.freqtrade.io/schema.json",
+    "_comment_exchange": "══ BITGET SPOT — Config Principal ══",
+    "_comment_dryrun": "DRY_RUN activé par défaut. Mettre dry_run à false pour le live trading.",
+    "_comment_fees": "Bitget: 0.10% maker/taker (0.08% avec BGB token)",
+    "_comment_env": "Les clés API sont lues depuis le fichier .env (BITGET_API_KEY, BITGET_API_SECRET, BITGET_API_PASSWORD). Remplissez le .env, pas ce fichier.",
+    "trading_mode": "spot",
+    "margin_mode": "",
+    "max_open_trades": 5,
+    "stake_currency": "USDT",
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "dry_run": true,
+    "dry_run_wallet": 10000,
+    "cancel_open_orders_on_exit": false,
+    "exchange": {
+        "name": "bitget",
+        "key": "",
+        "secret": "",
+        "password": "",
+        "ccxt_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "SOL/USDT",
+            "BNB/USDT",
+            "XRP/USDT",
+            "ADA/USDT",
+            "AVAX/USDT",
+            "DOGE/USDT",
+            "DOT/USDT",
+            "MATIC/USDT"
+        ],
+        "pair_blacklist": [
+            ".*DOWN/USDT",
+            ".*UP/USDT",
+            ".*BEAR/USDT",
+            ".*BULL/USDT",
+            ".*_PREMIUM/USDT"
+        ]
+    },
+    "_comment_unfilledtimeout": "Timeout pour les ordres non remplis",
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "_comment_pricing": "Pricing: on utilise le dernier prix pour le spot",
+    "entry_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+    },
+    "_comment_pairlists": "Pairlists: statique par défaut, peut être changé en VolumePairList",
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "_comment_telegram": "══ NOTIFICATIONS TELEGRAM ══ Les clés sont dans .env (TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID)",
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": "",
+        "notification_settings": {
+            "status": "on",
+            "warning": "on",
+            "startup": "on",
+            "entry": "on",
+            "exit": "on",
+            "entry_cancel": "on",
+            "exit_cancel": "on",
+            "entry_fill": "on",
+            "exit_fill": "on",
+            "protection_trigger": "on",
+            "protection_trigger_global": "on",
+            "show_candle": "off"
+        },
+        "balance_dust_level": 0.01
+    },
+    "_comment_api": "══ API SERVER (FreqUI) ══",
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "CHANGE_ME_TO_A_RANDOM_SECRET",
+        "CORS_origins": [],
+        "username": "freqtrader",
+        "password": "SuperSecretPassword"
+    },
+    "_comment_internals": "Paramètres internes Freqtrade",
+    "internals": {
+        "process_throttle_secs": 5,
+        "heartbeat_interval": 60
+    },
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "bot_name": "anis-solidscale-bitget"
+}

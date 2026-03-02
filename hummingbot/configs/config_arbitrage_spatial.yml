@@ -1,0 +1,51 @@
+# ══════════════════════════════════════════════════════════════
+# CONFIG : Arbitrage Spatial
+# Modifiable indépendamment des autres stratégies
+# ══════════════════════════════════════════════════════════════
+
+# ── Mode ──
+DRY_RUN: true
+
+# ── Exchanges à comparer ──
+exchange_a:
+  name: "bitget"
+  api_key: ""
+  api_secret: ""
+  api_password: ""
+
+exchange_b:
+  name: "mexc"
+  api_key: ""
+  api_secret: ""
+
+# ── Paires à surveiller ──
+pairs:
+  - "BTC/USDT"
+  - "ETH/USDT"
+  - "SOL/USDT"
+  - "BNB/USDT"
+  - "XRP/USDT"
+
+# ── Seuils ──
+# Spread minimum pour déclencher un arb (en %. Inclut les frais)
+min_spread_pct: 0.3
+
+# Frais estimés (maker + taker + retrait, total aller-retour)
+total_fee_pct: 0.2
+
+# ── Taille ──
+order_amount_usdt: 100
+max_concurrent_arbs: 3
+
+# ── Timing ──
+check_interval_seconds: 5
+order_timeout_seconds: 30
+
+# ── Liquidité ──
+min_volume_24h_usdt: 50000
+
+# ── Notifications ──
+telegram_enabled: true
+
+# ── Logging ──
+log_to_sqlite: true

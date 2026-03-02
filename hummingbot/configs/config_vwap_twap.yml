@@ -1,0 +1,36 @@
+# Config: VWAP / TWAP Execution
+DRY_RUN: true
+
+exchange:
+  name: "mexc"
+  api_key: ""
+  api_secret: ""
+
+# Détails de l'ordre à fractionner
+order:
+  pair: "BTC/USDT"
+  side: "buy"
+  total_amount: 0.5  # BTC total à accumuler
+  
+# ── TWAP (Time Weighted) ──
+twap:
+  enabled: true
+  num_slices: 20          # Nombre de tranches
+  interval_seconds: 300   # 5 min entre chaque tranche
+  randomize_time: true    # Ajouter du bruit aléatoire
+  randomize_range_pct: 20 # +/- 20% sur l'intervalle
+
+# ── VWAP (Volume Weighted) ──
+vwap:
+  enabled: false
+  target_participation_pct: 5.0  # Max 5% du volume de la bougie
+  lookback_candles: 20           # Volume moyen sur 20 bougies
+
+# ── Limites ──
+max_slippage_pct: 0.3
+min_order_size_usdt: 10
+max_single_order_pct: 10  # Max 10% de la taille totale par tranche
+price_limit_pct: 0.5      # Max 0.5% au-dessus du marché (limit order)
+
+telegram_enabled: true
+log_to_sqlite: true

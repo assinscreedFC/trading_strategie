@@ -1,0 +1,31 @@
+# Config: Order Flow Tracker
+DRY_RUN: true
+
+exchange:
+  name: "bitget"
+  api_key: ""
+  api_secret: ""
+  api_password: ""
+
+pairs:
+  - "BTC/USDT"
+  - "ETH/USDT"
+  - "SOL/USDT"
+
+# ── Détection de murs d'ordres ──
+wall_detection:
+  min_wall_size_btc: 5.0          # Taille min (en BTC equiv.) pour mur
+  min_wall_ratio: 3.0             # Mur = ordres > 3x la moyenne du niveau
+  depth_levels: 20                # Profondeur du carnet à analyser
+  
+# ── Stratégie de placement ──
+placement:
+  offset_from_wall_pct: 0.05      # Placer l'ordre 0.05% devant le mur
+  order_amount_usdt: 100
+  take_profit_pct: 0.3            # TP rapide (scalp devant le mur)
+  stop_loss_pct: 0.2              # SL serré (le mur protège)
+
+check_interval_seconds: 2
+min_volume_24h_usdt: 500000
+telegram_enabled: true
+log_to_sqlite: true

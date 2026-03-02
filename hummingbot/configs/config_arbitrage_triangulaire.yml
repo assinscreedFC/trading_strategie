@@ -1,0 +1,26 @@
+# Config: Arbitrage Triangulaire
+DRY_RUN: true
+
+exchange:
+  name: "bitget"
+  api_key: ""
+  api_secret: ""
+  api_password: ""
+
+# Triplets de paires pour le cycle A->B->C->A
+triangles:
+  - cycle: ["BTC/USDT", "ETH/BTC", "ETH/USDT"]
+    direction: "forward"  # USDT->BTC->ETH->USDT
+  - cycle: ["BTC/USDT", "SOL/BTC", "SOL/USDT"]
+    direction: "forward"
+  - cycle: ["ETH/USDT", "BNB/ETH", "BNB/USDT"]
+    direction: "forward"
+
+min_profit_pct: 0.15
+total_fee_per_trade_pct: 0.1
+order_amount_usdt: 200
+check_interval_seconds: 3
+max_slippage_pct: 0.1
+min_volume_24h_usdt: 100000
+telegram_enabled: true
+log_to_sqlite: true

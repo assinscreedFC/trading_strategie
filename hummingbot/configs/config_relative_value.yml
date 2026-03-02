@@ -1,0 +1,36 @@
+# Config: Relative Value Rotation (Pairs Trading)
+DRY_RUN: true
+
+exchange:
+  name: "bitget"
+  api_key: ""
+  api_secret: ""
+  api_password: ""
+
+# Paires corrélées dans le même secteur
+pairs_groups:
+  layer1:
+    - "ETH/USDT"
+    - "SOL/USDT"
+    - "AVAX/USDT"
+    - "ADA/USDT"
+  defi:
+    - "UNI/USDT"
+    - "AAVE/USDT"
+    - "LINK/USDT"
+  ai_tokens:
+    - "FET/USDT"
+    - "RNDR/USDT"
+    - "TAO/USDT"
+
+# Z-score pour rotation
+zscore_entry_threshold: 2.0
+zscore_exit_threshold: 0.5
+lookback_period: 48
+correlation_min: 0.7
+
+order_amount_usdt: 150
+check_interval_seconds: 60
+rebalance_interval_hours: 4
+telegram_enabled: true
+log_to_sqlite: true

@@ -1,0 +1,39 @@
+# ══════════════════════════════════════════════════════════════
+# anis solidscale - Elite Spot Trading Suite
+# Dépendances Python
+# ══════════════════════════════════════════════════════════════
+
+# --- Freqtrade (Catégories 1 & 5) ---
+freqtrade>=2024.1
+
+# --- Indicateurs Techniques ---
+pandas-ta>=0.3.14
+ta>=0.11.0
+
+# --- Data & ML (Catégorie 5 - IA) ---
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# --- On-Chain (Catégorie 4) ---
+web3>=6.0.0
+aiohttp>=3.9.0
+
+# --- Hummingbot (Catégories 2 & 3) ---
+ccxt>=4.0.0
+websockets>=12.0
+
+# --- Utilitaires Partagés ---
+requests>=2.31.0
+python-telegram-bot>=20.0
+python-dotenv>=1.0.0
+pyyaml>=6.0
+SQLAlchemy>=2.0.0
+
+# --- Tests ---
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+

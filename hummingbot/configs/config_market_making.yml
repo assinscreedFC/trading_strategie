@@ -1,0 +1,30 @@
+# Config: Market Making DEX (Uniswap V3)
+DRY_RUN: true
+
+chain:
+  name: "ethereum"
+  rpc_url: "https://eth-mainnet.g.alchemy.com/v2/YOUR_KEY"
+  chain_id: 1
+
+wallet:
+  private_key: ""  # JAMAIS en clair en production, utiliser env var
+
+pool:
+  address: ""  # Adresse du pool Uniswap V3
+  token0: "WETH"
+  token1: "USDC"
+  fee_tier: 3000  # 0.3% (500, 3000, 10000)
+
+# Paramètres de la position LP concentrée
+position:
+  range_width_pct: 5.0      # Largeur du range (+/- 5%)
+  rebalance_threshold_pct: 3.0  # Rebalance si prix sort de 3%
+  amount_token0: 0.1        # Montant initial token0
+  amount_token1: 200        # Montant initial token1
+
+check_interval_seconds: 30
+gas_limit: 500000
+max_gas_price_gwei: 50
+min_fee_earned_usdt: 1.0
+telegram_enabled: true
+log_to_sqlite: true

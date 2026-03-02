@@ -1,0 +1,7 @@
+# Fichiers à ne JAMAIS committer
+.env
+*.db
+logs/
+__pycache__/
+*.pyc
+.pytest_cache/
