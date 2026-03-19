@@ -1,0 +1,38 @@
+{
+  "strategy_name": "EMATripleCross",
+  "params": {
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ema_fast": 7,
+      "ema_mid": 29,
+      "ema_slow": 41,
+      "rsi_max": 71,
+      "rsi_min": 39,
+      "rsi_period": 12,
+      "volume_mult": 1.6,
+      "volume_period": 26
+    },
+    "sell": {
+      "rsi_exit": 67
+    },
+    "roi": {
+      "0": 0.708,
+      "1918": 0.185,
+      "3509": 0.033,
+      "6524": 0
+    },
+    "stoploss": {
+      "stoploss": -0.157
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.182,
+      "trailing_stop_positive_offset": 0.221,
+      "trailing_only_offset_is_reached": false
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-19 03:55:11.907063+00:00"
+}

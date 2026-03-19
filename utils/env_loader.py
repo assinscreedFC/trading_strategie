@@ -6,7 +6,7 @@
 #
 # USAGE :
 #   from utils.env_loader import env
-#   api_key = env.BITGET_API_KEY
+#   api_key = env.BINANCE_API_KEY
 #
 # CHOIX TECHNIQUE :
 # python-dotenv charge le fichier .env au premier import.
@@ -60,32 +60,28 @@ class _EnvConfig:
         return os.environ.get("TELEGRAM_CHAT_ID", "")
 
     # ═══════════════════════════════════════════════════════
-    # BITGET
+    # BINANCE (exchange principal)
     # ═══════════════════════════════════════════════════════
 
     @property
-    def BITGET_API_KEY(self) -> str:
-        return os.environ.get("BITGET_API_KEY", "")
+    def BINANCE_API_KEY(self) -> str:
+        return os.environ.get("BINANCE_API_KEY", "")
 
     @property
-    def BITGET_API_SECRET(self) -> str:
-        return os.environ.get("BITGET_API_SECRET", "")
-
-    @property
-    def BITGET_API_PASSWORD(self) -> str:
-        return os.environ.get("BITGET_API_PASSWORD", "")
+    def BINANCE_API_SECRET(self) -> str:
+        return os.environ.get("BINANCE_API_SECRET", "")
 
     # ═══════════════════════════════════════════════════════
-    # MEXC
+    # KRAKEN (régulé EU / PSAN France)
     # ═══════════════════════════════════════════════════════
 
     @property
-    def MEXC_API_KEY(self) -> str:
-        return os.environ.get("MEXC_API_KEY", "")
+    def KRAKEN_API_KEY(self) -> str:
+        return os.environ.get("KRAKEN_API_KEY", "")
 
     @property
-    def MEXC_API_SECRET(self) -> str:
-        return os.environ.get("MEXC_API_SECRET", "")
+    def KRAKEN_API_SECRET(self) -> str:
+        return os.environ.get("KRAKEN_API_SECRET", "")
 
     # ═══════════════════════════════════════════════════════
     # BLOCKCHAIN / ON-CHAIN
@@ -122,19 +118,18 @@ class _EnvConfig:
     # HELPERS
     # ═══════════════════════════════════════════════════════
 
-    def get_bitget_config(self) -> dict:
-        """Retourne la config CCXT pour Bitget."""
+    def get_binance_config(self) -> dict:
+        """Retourne la config CCXT pour Binance."""
         return {
-            "apiKey": self.BITGET_API_KEY,
-            "secret": self.BITGET_API_SECRET,
-            "password": self.BITGET_API_PASSWORD,
+            "apiKey": self.BINANCE_API_KEY,
+            "secret": self.BINANCE_API_SECRET,
         }
 
-    def get_mexc_config(self) -> dict:
-        """Retourne la config CCXT pour MEXC."""
+    def get_kraken_config(self) -> dict:
+        """Retourne la config CCXT pour Kraken."""
         return {
-            "apiKey": self.MEXC_API_KEY,
-            "secret": self.MEXC_API_SECRET,
+            "apiKey": self.KRAKEN_API_KEY,
+            "secret": self.KRAKEN_API_SECRET,
         }
 
     def is_telegram_configured(self) -> bool:

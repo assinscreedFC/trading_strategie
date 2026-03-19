@@ -1,0 +1,32 @@
+{
+  "strategy_name": "TRIXMomentum",
+  "params": {
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ema_period": 65,
+      "signal_period": 5,
+      "trix_period": 19,
+      "volume_mult": 1.9,
+      "volume_period": 13
+    },
+    "roi": {
+      "0": 0.116,
+      "281": 0.081,
+      "667": 0.023,
+      "1007": 0
+    },
+    "stoploss": {
+      "stoploss": -0.077
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.086,
+      "trailing_stop_positive_offset": 0.167,
+      "trailing_only_offset_is_reached": false
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-19 04:07:25.347880+00:00"
+}

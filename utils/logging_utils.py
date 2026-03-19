@@ -67,6 +67,7 @@ class TradeLogger:
         self._table_name = strategy_name.lower().replace(" ", "_").replace("-", "_")
         self.csv_enabled = csv_enabled
         self._lock = threading.Lock()
+        self._conn = None
 
         # ── Créer le répertoire de logs ──
         self._db_dir = Path(db_dir) if db_dir else self.DEFAULT_DB_DIR
@@ -82,6 +83,17 @@ class TradeLogger:
         # ── Initialiser le fichier CSV (si activé) ──
         if self.csv_enabled:
             self._init_csv()
+
+    def __getstate__(self):
+        state = self.__dict__.copy()
+        state.pop("_lock", None)
+        state.pop("_conn", None)
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+        self._lock = threading.Lock()
+        self._conn = None
 
     def _init_db(self) -> None:
         """

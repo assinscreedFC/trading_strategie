@@ -82,6 +82,15 @@ class TelegramNotifier:
                 "Définissez TELEGRAM_BOT_TOKEN et TELEGRAM_CHAT_ID."
             )
 
+    def __getstate__(self):
+        state = self.__dict__.copy()
+        state.pop("_lock", None)
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+        self._lock = threading.Lock()
+
     def _check_rate_limit(self) -> bool:
         """
         Vérifie si on peut envoyer un message sans dépasser le rate limit.

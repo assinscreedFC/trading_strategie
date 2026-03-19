@@ -85,24 +85,21 @@ class OrderFlowTracker:
     def _init_exchange(config: dict):
         if ccxt is None:
             return None
-        name = config.get("name", "bitget")
+        name = config.get("name", "binance")
         cls = getattr(ccxt, name, None)
         if cls is None:
             return None
         api_key = config.get("api_key", "")
         api_secret = config.get("api_secret", "")
-        api_password = config.get("api_password", "")
-        if not api_key and name == "bitget":
-            api_key = env.BITGET_API_KEY
-            api_secret = env.BITGET_API_SECRET
-            api_password = env.BITGET_API_PASSWORD
-        elif not api_key and name == "mexc":
-            api_key = env.MEXC_API_KEY
-            api_secret = env.MEXC_API_SECRET
+        if not api_key and name == "binance":
+            api_key = env.BINANCE_API_KEY
+            api_secret = env.BINANCE_API_SECRET
+        elif not api_key and name == "kraken":
+            api_key = env.KRAKEN_API_KEY
+            api_secret = env.KRAKEN_API_SECRET
         return cls({
             "apiKey": api_key,
             "secret": api_secret,
-            "password": api_password,
             "enableRateLimit": True,
         })
 

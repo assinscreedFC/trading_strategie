@@ -48,7 +48,7 @@ def _make_test_config() -> dict:
         "trading_mode": "spot",
         "stake_currency": "USDT",
         "stake_amount": 100,
-        "exchange": {"name": "bitget", "key": "", "secret": ""},
+        "exchange": {"name": "binance", "key": "", "secret": ""},
     }
 
 

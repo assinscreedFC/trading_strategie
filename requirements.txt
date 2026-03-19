@@ -7,7 +7,7 @@
 freqtrade>=2024.1
 
 # --- Indicateurs Techniques ---
-pandas-ta>=0.3.14
+ft-pandas-ta>=0.3.15
 ta>=0.11.0
 
 # --- Data & ML (Catégorie 5 - IA) ---

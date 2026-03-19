@@ -106,7 +106,7 @@ class ArbitrageSpatial:
             print("[ArbitrageSpatial] CCXT non installé. pip install ccxt")
             return None
 
-        name = exchange_config.get("name", "bitget")
+        name = exchange_config.get("name", "binance")
         exchange_class = getattr(ccxt, name, None)
         if exchange_class is None:
             print(f"[ArbitrageSpatial] Exchange '{name}' inconnu dans CCXT.")
@@ -115,20 +115,17 @@ class ArbitrageSpatial:
         # ── Fallback .env si les clés YAML sont vides ──
         api_key = exchange_config.get("api_key", "")
         api_secret = exchange_config.get("api_secret", "")
-        api_password = exchange_config.get("api_password", "")
 
-        if not api_key and name == "bitget":
-            api_key = env.BITGET_API_KEY
-            api_secret = env.BITGET_API_SECRET
-            api_password = env.BITGET_API_PASSWORD
-        elif not api_key and name == "mexc":
-            api_key = env.MEXC_API_KEY
-            api_secret = env.MEXC_API_SECRET
+        if not api_key and name == "binance":
+            api_key = env.BINANCE_API_KEY
+            api_secret = env.BINANCE_API_SECRET
+        elif not api_key and name == "kraken":
+            api_key = env.KRAKEN_API_KEY
+            api_secret = env.KRAKEN_API_SECRET
 
         return exchange_class({
             "apiKey": api_key,
             "secret": api_secret,
-            "password": api_password,
             "enableRateLimit": True,
         })
 

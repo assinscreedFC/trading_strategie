@@ -2,7 +2,7 @@
 DRY_RUN: true
 
 exchange:
-  name: "mexc"
+  name: "kraken"
   api_key: ""
   api_secret: ""
 

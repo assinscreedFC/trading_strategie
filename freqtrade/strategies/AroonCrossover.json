@@ -1,0 +1,33 @@
+{
+    "strategy_name": "AroonCrossover",
+    "params": {
+        "buy": {
+            "aroon_period": 11,
+            "aroon_up_min": 50,
+            "ema_period": 28,
+            "rsi_max": 70,
+            "rsi_min": 35,
+            "rsi_period": 17,
+            "volume_mult": 1.7,
+            "volume_period": 32
+        },
+        "sell": {
+            "rsi_exit": 75
+        },
+        "roi": {
+            "0": 0.497,
+            "931": 0.091,
+            "2382": 0.055,
+            "4493": 0
+        },
+        "stoploss": {
+            "stoploss": -0.036
+        },
+        "trailing": {
+            "trailing_stop": true,
+            "trailing_stop_positive": 0.066,
+            "trailing_stop_positive_offset": 0.11,
+            "trailing_only_offset_is_reached": true
+        }
+    }
+}

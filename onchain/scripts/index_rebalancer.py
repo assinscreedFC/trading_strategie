@@ -68,7 +68,7 @@ class IndexRebalancer:
                 self.exchange = cls({
                     "apiKey": cfg.API_KEY,
                     "secret": cfg.API_SECRET,
-                    "password": cfg.API_PASSWORD,
+                    "password": getattr(cfg, "API_PASSWORD", ""),
                     "enableRateLimit": True,
                 })
 

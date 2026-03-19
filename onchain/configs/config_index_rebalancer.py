@@ -13,10 +13,9 @@ except ImportError:
 DRY_RUN = True
 
 # ── Exchange pour l'exécution ──
-EXCHANGE = "bitget"
-API_KEY = os.environ.get("BITGET_API_KEY", "")
-API_SECRET = os.environ.get("BITGET_API_SECRET", "")
-API_PASSWORD = os.environ.get("BITGET_API_PASSWORD", "")
+EXCHANGE = "binance"
+API_KEY = os.environ.get("BINANCE_API_KEY", "")
+API_SECRET = os.environ.get("BINANCE_API_SECRET", "")
 
 # ── Composition de l'index ──
 # Panier thématique avec poids cibles (doivent sommer à 100)

@@ -1,0 +1,34 @@
+{
+  "strategy_name": "MARibbonStack",
+  "params": {
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ema_1": 5,
+      "ema_2": 16,
+      "ema_3": 35,
+      "ema_4": 41,
+      "ema_5": 50,
+      "volume_mult": 1.7,
+      "volume_period": 18
+    },
+    "roi": {
+      "0": 0.873,
+      "637": 0.265,
+      "1775": 0.057,
+      "6335": 0
+    },
+    "stoploss": {
+      "stoploss": -0.024
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.132,
+      "trailing_stop_positive_offset": 0.155,
+      "trailing_only_offset_is_reached": true
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-19 04:19:09.023575+00:00"
+}

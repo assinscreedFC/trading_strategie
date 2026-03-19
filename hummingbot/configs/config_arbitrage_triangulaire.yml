@@ -2,10 +2,9 @@
 DRY_RUN: true
 
 exchange:
-  name: "bitget"
+  name: "binance"
   api_key: ""
   api_secret: ""
-  api_password: ""
 
 # Triplets de paires pour le cycle A->B->C->A
 triangles:

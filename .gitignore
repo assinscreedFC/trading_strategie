@@ -1,7 +1,27 @@
 # Fichiers à ne JAMAIS committer
 .env
+.env.local
 *.db
+*.sqlite*
 logs/
 __pycache__/
 *.pyc
 .pytest_cache/
+
+# Données générées
+freqtrade/data/
+freqtrade/tests/
+user_data/
+RAPPORT_*.md
+
+# Cache & build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

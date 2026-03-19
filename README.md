@@ -15,8 +15,8 @@
 ```
 ft_userdata/
 ├── freqtrade/                    # Freqtrade strategies (Cat. 1 & 5)
-│   ├── config_bitget.json        # Bitget exchange config
-│   ├── config_mexc.json          # MEXC exchange config (lowest fees)
+│   ├── config_binance.json       # Binance exchange config (principal)
+│   ├── config_kraken.json        # Kraken exchange config (EU/PSAN France)
 │   ├── strategies/
 │   │   ├── GridTradingSpot.py    # ATR-adaptive grid trading
 │   │   ├── DCADynamique.py       # RSI-weighted dollar cost averaging
@@ -84,7 +84,7 @@ cp .env.example .env
 python -m pytest freqtrade/tests/ hummingbot/tests/ onchain/tests/ -v
 
 # 4. Run a Freqtrade strategy (dry-run)
-freqtrade trade --strategy GridTradingSpot -c freqtrade/config_bitget.json
+freqtrade trade --strategy GridTradingSpot -c freqtrade/config_binance.json
 
 # 5. Run a Hummingbot script
 python hummingbot/scripts/arbitrage_spatial.py
@@ -133,14 +133,13 @@ Contenu du `.env` :
 TELEGRAM_BOT_TOKEN=votre_token_ici
 TELEGRAM_CHAT_ID=votre_chat_id_ici
 
-# ── BITGET ──
-BITGET_API_KEY=votre_cle_ici
-BITGET_API_SECRET=votre_secret_ici
-BITGET_API_PASSWORD=votre_password_ici
+# ── BINANCE ──
+BINANCE_API_KEY=votre_cle_ici
+BINANCE_API_SECRET=votre_secret_ici
 
-# ── MEXC ──
-MEXC_API_KEY=votre_cle_ici
-MEXC_API_SECRET=votre_secret_ici
+# ── KRAKEN ──
+KRAKEN_API_KEY=votre_cle_ici
+KRAKEN_API_SECRET=votre_secret_ici
 
 # ── BLOCKCHAIN ──
 ETH_RPC_URL=https://eth-mainnet.g.alchemy.com/v2/VOTRE_CLE
