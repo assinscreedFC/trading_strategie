@@ -1,0 +1,35 @@
+{
+  "strategy_name": "CombinedBinHAndClucV8",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.008,
+      "trailing_stop_positive_offset": 0.012,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "sell": {
+      "sell_bb_offset": 96
+    },
+    "buy": {
+      "bb_delta_factor": 9,
+      "bb_period": 29,
+      "bb_std": 18,
+      "closedelta_factor": 6,
+      "tail_factor": 18
+    },
+    "roi": {
+      "0": 0.21,
+      "14": 0.074,
+      "40": 0.028,
+      "130": 0
+    },
+    "stoploss": {
+      "stoploss": -0.283
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 02:45:00.752314+00:00"
+}

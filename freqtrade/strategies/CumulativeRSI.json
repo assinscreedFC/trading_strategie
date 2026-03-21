@@ -1,0 +1,34 @@
+{
+  "strategy_name": "CumulativeRSI",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.015,
+      "trailing_stop_positive_offset": 0.025,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "cum_days": 3,
+      "cum_threshold": 15,
+      "rsi_period": 3,
+      "sma_trend": 150
+    },
+    "sell": {
+      "sma_exit": 4
+    },
+    "roi": {
+      "0": 0.411,
+      "542": 0.104,
+      "2069": 0.052,
+      "7215": 0
+    },
+    "stoploss": {
+      "stoploss": -0.094
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-19 20:44:18.227153+00:00"
+}

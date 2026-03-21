@@ -56,8 +56,21 @@ class FibonacciPullback(IStrategy):
     # ── Sell params ──
     rsi_exit = IntParameter(60, 80, default=70, space="sell")
 
+    # ── ADX trend filter ──
+    adx_period = IntParameter(10, 20, default=14, space="buy")
+    adx_threshold = IntParameter(15, 30, default=20, space="buy")
+
     _logger = None
     _notifier = None
+
+    def __getstate__(self):
+        state = self.__dict__.copy()
+        state["_logger"] = None
+        state["_notifier"] = None
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
 
     def _init_utils(self) -> None:
         if self._logger is None:
@@ -84,6 +97,10 @@ class FibonacciPullback(IStrategy):
         for vol_p in range(self.volume_period.low, self.volume_period.high + 1):
             dataframe = CommonIndicators.add_volume_sma(dataframe, period=vol_p)
 
+        # Pre-calculer ADX pour filtre tendance
+        for p in range(self.adx_period.low, self.adx_period.high + 1):
+            dataframe = CommonIndicators.add_adx(dataframe, period=p)
+
         return dataframe
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
@@ -104,9 +121,12 @@ class FibonacciPullback(IStrategy):
             & (dataframe["close"] > fib_618)
         )
 
+        adx_col = f"adx_{self.adx_period.value}"
+
         conditions = (
             (near_382 | near_618)
             & (dataframe[rsi_col] < self.rsi_entry.value)
+            & (dataframe[adx_col] > self.adx_threshold.value)
             & (dataframe["volume"] > 0)
         )
 

@@ -1,0 +1,33 @@
+{
+  "strategy_name": "RSIDivergence",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ema_filter": 31,
+      "rsi_period": 12,
+      "swing_lookback": 13
+    },
+    "sell": {
+      "rsi_exit": 66
+    },
+    "roi": {
+      "0": 0.247,
+      "777": 0.148,
+      "1558": 0.035,
+      "4951": 0
+    },
+    "stoploss": {
+      "stoploss": -0.269
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 06:22:51.481324+00:00"
+}

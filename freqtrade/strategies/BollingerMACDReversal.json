@@ -1,0 +1,33 @@
+{
+  "strategy_name": "BollingerMACDReversal",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "bb_period": 26,
+      "rsi_entry": 23,
+      "rsi_period": 13
+    },
+    "sell": {
+      "rsi_exit": 73
+    },
+    "roi": {
+      "0": 0.334,
+      "493": 0.261,
+      "1559": 0.048,
+      "3433": 0
+    },
+    "stoploss": {
+      "stoploss": -0.119
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-21 01:37:04.738559+00:00"
+}

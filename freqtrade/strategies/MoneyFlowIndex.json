@@ -1,0 +1,33 @@
+{
+  "strategy_name": "MoneyFlowIndex",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ema_filter": 60,
+      "mfi_entry": 29,
+      "mfi_period": 15
+    },
+    "sell": {
+      "mfi_exit": 85
+    },
+    "roi": {
+      "0": 0.539,
+      "1863": 0.186,
+      "4399": 0.036,
+      "8243": 0
+    },
+    "stoploss": {
+      "stoploss": -0.307
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 04:23:31.768911+00:00"
+}

@@ -1,0 +1,93 @@
+strategy,regime,trades,profit_pct,drawdown_pct,win_rate,profit_factor,sharpe,sortino,expectancy,max_consecutive_losses,avg_duration
+ADXRegimeFilter,baissier,3,3.07,0.0,100.0,0.0,4.12,-100.0,1.0233333333333332,0,"1 day, 0:00:00"
+ADXRegimeFilter,full_12m,20,22.0,2.95,85.0,7.84,0.98,-100.0,1.1,1,"3 days, 5:12:00"
+ADXRegimeFilter,haussier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+ADXRegimeFilter,stable,2,1.47,0.0,100.0,0.0,1.12,-100.0,0.735,1,"5 days, 6:00:00"
+BollingerMACDReversal,baissier,1,0.38,0.0,100.0,0.0,-100.0,-100.0,0.38,0,0:00:00
+BollingerMACDReversal,full_12m,7,5.16,0.0,100.0,0.0,0.99,-100.0,0.7371428571428572,0,15:26:00
+BollingerMACDReversal,haussier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+BollingerMACDReversal,stable,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+CCIMomentumTrend,baissier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+CCIMomentumTrend,full_12m,14,8.3,1.84,64.3,3.01,0.3,1.29,0.5928571428571429,2,"1 day, 3:09:00"
+CCIMomentumTrend,haussier,5,3.15,1.32,80.0,3.28,1.3,-100.0,0.63,1,8:00:00
+CCIMomentumTrend,stable,2,0.9,0.53,50.0,2.69,0.52,-100.0,0.45,1,"1 day, 4:00:00"
+EMATripleCross,baissier,2,3.86,0.0,100.0,0.0,4.34,-100.0,1.93,0,"2 days, 14:00:00"
+EMATripleCross,full_12m,11,13.06,0.95,90.9,13.19,0.76,-100.0,1.1872727272727273,1,22:11:00
+EMATripleCross,haussier,1,1.04,0.0,100.0,0.0,-100.0,-100.0,1.04,0,"1 day, 4:00:00"
+EMATripleCross,stable,3,3.82,0.0,100.0,0.0,3.09,-100.0,1.2733333333333332,0,"1 day, 1:20:00"
+FibonacciPullback,baissier,5,4.79,0.0,100.0,0.0,8.11,-100.0,0.958,0,"1 day, 13:36:00"
+FibonacciPullback,full_12m,20,17.59,0.17,90.0,95.84,1.71,-100.0,0.8795,1,"2 days, 1:00:00"
+FibonacciPullback,haussier,1,1.13,0.0,100.0,0.0,-100.0,-100.0,1.13,0,"2 days, 8:00:00"
+FibonacciPullback,stable,1,0.23,0.0,100.0,0.0,-100.0,-100.0,0.23,0,"3 days, 20:00:00"
+HeikinAshiTrend,baissier,24,-10.6,15.94,58.3,0.47,-2.83,-3.96,-0.44166666666666665,5,"1 day, 2:30:00"
+HeikinAshiTrend,full_12m,197,-21.17,37.29,57.4,0.85,-0.65,-0.82,-0.10746192893401016,9,"1 day, 13:55:00"
+HeikinAshiTrend,haussier,34,1.78,9.06,70.6,1.08,0.56,0.72,0.05235294117647059,3,"1 day, 14:21:00"
+HeikinAshiTrend,stable,24,2.62,10.55,54.2,1.19,0.83,0.92,0.10916666666666668,6,"1 day, 12:50:00"
+IchimokuBreakout,baissier,16,4.67,4.11,50.0,1.61,1.37,3.16,0.291875,5,14:45:00
+IchimokuBreakout,full_12m,104,-4.75,13.91,43.3,0.93,-0.18,-0.35,-0.04567307692307692,7,"1 day, 0:14:00"
+IchimokuBreakout,haussier,12,4.93,2.39,50.0,1.94,1.81,3.83,0.41083333333333333,3,20:00:00
+IchimokuBreakout,stable,10,2.69,4.92,50.0,1.53,1.0,1.86,0.269,3,"1 day, 0:24:00"
+KAMAAdaptiveTrend,baissier,2,0.76,0.0,100.0,0.0,443.45,-100.0,0.38,0,0:00:00
+KAMAAdaptiveTrend,full_12m,7,7.36,0.0,100.0,0.0,0.6,-100.0,1.0514285714285714,0,"1 day, 10:17:00"
+KAMAAdaptiveTrend,haussier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+KAMAAdaptiveTrend,stable,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+MACDDivergence,baissier,20,13.75,12.06,55.0,2.0,2.37,4.29,0.6875,6,"1 day, 17:36:00"
+MACDDivergence,full_12m,117,52.57,27.74,48.7,1.39,0.87,1.56,0.4493162393162393,9,"1 day, 18:28:00"
+MACDDivergence,haussier,7,8.62,1.57,71.4,5.69,2.89,6.77,1.2314285714285713,1,"2 days, 12:34:00"
+MACDDivergence,stable,10,8.27,5.27,50.0,2.4,2.11,7.1,0.827,4,"1 day, 4:24:00"
+MARibbonStack,baissier,8,1.61,4.84,37.5,1.33,0.41,1.36,0.20125,4,"1 day, 16:30:00"
+MARibbonStack,full_12m,75,50.41,12.65,41.3,1.96,1.07,6.11,0.6721333333333332,12,"1 day, 17:30:00"
+MARibbonStack,haussier,15,12.03,4.19,33.3,2.06,1.93,21.75,0.8019999999999999,4,"1 day, 6:56:00"
+MARibbonStack,stable,14,1.58,8.59,35.7,1.18,0.58,3.05,0.11285714285714286,9,"1 day, 4:17:00"
+MoneyFlowIndex,baissier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+MoneyFlowIndex,full_12m,20,14.92,0.0,100.0,0.0,1.55,-100.0,0.746,3,"3 days, 16:36:00"
+MoneyFlowIndex,haussier,4,2.79,0.0,100.0,0.0,3.33,-100.0,0.6975,1,"3 days, 15:00:00"
+MoneyFlowIndex,stable,2,1.17,0.0,100.0,0.0,103.22,-100.0,0.585,0,"2 days, 6:00:00"
+OBVDivergence,baissier,8,6.77,0.45,87.5,15.92,2.88,-100.0,0.84625,1,"1 day, 11:00:00"
+OBVDivergence,full_12m,40,27.11,3.86,70.0,3.06,0.99,1.3,0.67775,2,"1 day, 21:30:00"
+OBVDivergence,haussier,2,3.01,0.0,100.0,0.0,7.55,-100.0,1.505,0,12:00:00
+OBVDivergence,stable,2,3.62,0.03,50.0,109.75,1.1,-100.0,1.81,1,"1 day, 0:00:00"
+OBVTrendConfirm,baissier,1,0.57,0.0,100.0,0.0,-100.0,-100.0,0.57,0,8:00:00
+OBVTrendConfirm,full_12m,10,4.66,0.21,90.0,22.64,0.77,-100.0,0.466,1,16:48:00
+OBVTrendConfirm,haussier,3,1.6,0.0,100.0,0.0,4.79,-100.0,0.5333333333333333,0,22:40:00
+OBVTrendConfirm,stable,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+RSIDivergence,baissier,9,11.64,0.0,100.0,0.0,8.47,-100.0,1.2933333333333334,1,"1 day, 8:53:00"
+RSIDivergence,full_12m,61,49.78,3.64,82.0,5.64,2.33,1.81,0.8160655737704918,2,"2 days, 15:52:00"
+RSIDivergence,haussier,10,6.64,2.21,80.0,3.76,3.24,-100.0,0.6639999999999999,1,"2 days, 7:36:00"
+RSIDivergence,stable,8,3.55,1.0,75.0,4.5,3.05,-100.0,0.44375,1,"2 days, 9:30:00"
+RSIRangeMeanRevert,baissier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+RSIRangeMeanRevert,full_12m,51,9.48,16.79,76.5,1.27,0.26,0.28,0.18588235294117647,4,"3 days, 23:41:00"
+RSIRangeMeanRevert,haussier,19,11.51,5.41,89.5,2.81,4.4,4.69,0.6057894736842105,2,"1 day, 22:32:00"
+RSIRangeMeanRevert,stable,4,3.12,0.94,75.0,4.2,1.54,-100.0,0.78,1,"3 days, 7:00:00"
+RangeBreakoutVolume,baissier,6,8.78,0.0,100.0,0.0,12.51,-100.0,1.4633333333333332,0,13:20:00
+RangeBreakoutVolume,full_12m,47,7.84,4.94,40.4,1.55,0.46,1.32,0.16680851063829788,8,12:28:00
+RangeBreakoutVolume,haussier,2,-1.58,1.58,0.0,0.0,-4.34,-4.34,-0.79,2,7:00:00
+RangeBreakoutVolume,stable,7,-0.42,2.6,28.6,0.85,-0.27,-0.57,-0.06,4,11:43:00
+SmartMoneyConcepts,baissier,8,4.09,1.59,75.0,3.46,1.62,-100.0,0.51125,1,14:38:00
+SmartMoneyConcepts,full_12m,77,48.1,3.4,64.9,3.61,2.09,3.76,0.6246753246753247,4,18:35:00
+SmartMoneyConcepts,haussier,11,0.97,2.26,45.5,1.29,0.63,1.34,0.08818181818181818,3,18:00:00
+SmartMoneyConcepts,stable,4,5.61,0.0,100.0,0.0,131.33,-100.0,1.4025,0,14:15:00
+SuperTrendADX,baissier,3,-0.7,1.08,33.3,0.35,-0.63,-1.69,-0.2333333333333333,2,17:20:00
+SuperTrendADX,full_12m,49,25.27,7.62,65.3,3.27,0.81,0.31,0.5157142857142857,3,"4 days, 12:29:00"
+SuperTrendADX,haussier,1,-3.06,3.06,0.0,0.0,-100.0,-100.0,-3.06,1,"8 days, 16:00:00"
+SuperTrendADX,stable,3,2.88,0.0,100.0,0.0,1.31,-100.0,0.96,0,16:00:00
+TripleScreenElder,baissier,3,5.19,0.0,100.0,0.0,3.64,-100.0,1.7300000000000002,0,"1 day, 2:40:00"
+TripleScreenElder,full_12m,7,10.0,0.0,100.0,0.0,0.93,-100.0,1.4285714285714286,0,21:09:00
+TripleScreenElder,haussier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+TripleScreenElder,stable,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+VolatilityBreakout,baissier,2,1.41,0.0,100.0,0.0,0.95,-100.0,0.705,0,1:30:00
+VolatilityBreakout,full_12m,34,10.79,0.28,85.3,13.89,1.69,5.29,0.31735294117647056,2,8:51:00
+VolatilityBreakout,haussier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+VolatilityBreakout,stable,4,0.02,0.3,50.0,1.05,0.05,0.07,0.005,1,4:30:00
+VolumeProfileAccumulation,baissier,8,-12.63,18.89,75.0,0.33,-1.13,-173.8,-1.57875,2,"1 day, 17:30:00"
+VolumeProfileAccumulation,full_12m,38,11.02,20.68,68.4,1.35,0.18,0.13,0.29,3,"3 days, 0:51:00"
+VolumeProfileAccumulation,haussier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+VolumeProfileAccumulation,stable,2,2.54,0.0,100.0,0.0,2.49,-100.0,1.27,0,"1 day, 10:00:00"
+WyckoffAccumulation,baissier,3,4.1,3.51,66.7,2.17,0.48,-100.0,1.3666666666666665,1,"1 day, 6:40:00"
+WyckoffAccumulation,full_12m,15,33.29,8.13,80.0,3.93,0.51,1.3,2.219333333333333,3,"3 days, 0:32:00"
+WyckoffAccumulation,haussier,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+WyckoffAccumulation,stable,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+ZScoreMeanReversion,baissier,1,2.48,0.0,100.0,0.0,-100.0,-100.0,2.48,0,"2 days, 4:00:00"
+ZScoreMeanReversion,full_12m,8,10.27,0.0,100.0,0.0,0.69,-100.0,1.28375,0,"1 day, 22:00:00"
+ZScoreMeanReversion,haussier,1,1.05,0.0,100.0,0.0,-100.0,-100.0,1.05,0,"1 day, 0:00:00"
+ZScoreMeanReversion,stable,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00

@@ -1,0 +1,34 @@
+{
+  "strategy_name": "HeikinAshiTrend",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ema_period": 68,
+      "lookback": 5,
+      "volume_period": 40,
+      "wick_tolerance": 0.0005
+    },
+    "sell": {
+      "exit_lookback": 1
+    },
+    "roi": {
+      "0": 0.347,
+      "802": 0.078,
+      "1350": 0.035,
+      "5135": 0
+    },
+    "stoploss": {
+      "stoploss": -0.178
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-21 00:34:48.088637+00:00"
+}

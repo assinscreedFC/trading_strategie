@@ -52,8 +52,20 @@ class IchimokuBreakout(IStrategy):
     senkou_b_period = IntParameter(40, 65, default=52, space="buy")
     volume_period = IntParameter(10, 50, default=20, space="buy")
 
+    # ── Sell params ──
+    exit_confirm_candles = IntParameter(1, 3, default=1, space="sell")
+
     _logger = None
     _notifier = None
+
+    def __getstate__(self):
+        state = self.__dict__.copy()
+        state["_logger"] = None
+        state["_notifier"] = None
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
 
     def _init_utils(self) -> None:
         if self._logger is None:

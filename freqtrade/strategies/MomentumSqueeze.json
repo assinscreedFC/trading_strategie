@@ -1,0 +1,35 @@
+{
+    "strategy_name": "MomentumSqueeze",
+    "params": {
+        "buy": {
+            "bb_period": 16,
+            "bb_std": 2.0,
+            "kc_mult": 1.9,
+            "kc_period": 24,
+            "momentum_period": 11,
+            "rsi_max": 74,
+            "rsi_period": 13,
+            "squeeze_lookback": 4,
+            "volume_mult": 2.6,
+            "volume_period": 49
+        },
+        "sell": {
+            "rsi_exit": 80
+        },
+        "roi": {
+            "0": 0.313,
+            "192": 0.202,
+            "489": 0.044,
+            "990": 0
+        },
+        "stoploss": {
+            "stoploss": -0.13
+        },
+        "trailing": {
+            "trailing_stop": true,
+            "trailing_stop_positive": 0.241,
+            "trailing_stop_positive_offset": 0.326,
+            "trailing_only_offset_is_reached": false
+        }
+    }
+}

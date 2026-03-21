@@ -1,0 +1,35 @@
+{
+  "strategy_name": "ConnorsRSI",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "crsi_entry": 18,
+      "rank_period": 52,
+      "rsi_period": 4,
+      "sma_trend": 187,
+      "streak_rsi_period": 3
+    },
+    "sell": {
+      "crsi_exit": 95
+    },
+    "roi": {
+      "0": 0.251,
+      "1901": 0.216,
+      "3660": 0.071,
+      "5087": 0
+    },
+    "stoploss": {
+      "stoploss": -0.341
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-19 21:08:59.393295+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "strategy_name": "StochasticMomentumIndex",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ema_filter": 38,
+      "k_period": 15,
+      "stoch_oversold": 23
+    },
+    "sell": {
+      "stoch_overbought": 85
+    },
+    "roi": {
+      "0": 0.678,
+      "1651": 0.293,
+      "4487": 0.102,
+      "9946": 0
+    },
+    "stoploss": {
+      "stoploss": -0.237
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 05:00:16.502710+00:00"
+}

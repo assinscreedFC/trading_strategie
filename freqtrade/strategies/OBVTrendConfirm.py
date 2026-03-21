@@ -1,24 +1,23 @@
 # ══════════════════════════════════════════════════════════════
 # anis solidscale - Elite Spot Trading Suite
-# STRATEGIE : HeikinAshiTrend
-# CATEGORIE : Tendance — Heikin Ashi Momentum
+# STRATEGIE : OBVTrendConfirm
+# CATEGORIE : Volume-trend — OBV Accumulation Confirmee
 # ══════════════════════════════════════════════════════════════
 #
 # LOGIQUE :
-# Heikin Ashi lisse le bruit des chandeliers classiques pour
-# identifier les tendances fortes.
-# 1. Bougie HA verte + pas de meche basse → tendance haussiere forte
-# 2. EMA en hausse → confirmation
-# 3. Sortie : bougie HA rouge sans meche haute OU ha_close < EMA
+# OBV (On-Balance Volume) precede le prix de 2-5 bougies (Granville).
+# 1. OBV > OBV_SMA (accumulation en cours)
+# 2. OBV rising sur N bougies (momentum volume)
+# 3. EMA trend filter + RSI pas en surachat
+# 4. Sortie : OBV < OBV_SMA (distribution)
 # ══════════════════════════════════════════════════════════════
 
 import sys
 from pathlib import Path
 
-import numpy as np
 from pandas import DataFrame
 
-from freqtrade.strategy import IStrategy, IntParameter, DecimalParameter
+from freqtrade.strategy import IStrategy, IntParameter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from utils.indicators import CommonIndicators
@@ -26,7 +25,7 @@ from utils.logging_utils import TradeLogger
 from utils.telegram_notifier import TelegramNotifier
 
 
-class HeikinAshiTrend(IStrategy):
+class OBVTrendConfirm(IStrategy):
     INTERFACE_VERSION = 3
     can_short = False
     timeframe = "4h"
@@ -40,13 +39,14 @@ class HeikinAshiTrend(IStrategy):
     trailing_only_offset_is_reached = True
 
     # ── Buy params ──
+    obv_sma_period = IntParameter(10, 30, default=20, space="buy")
+    obv_rising = IntParameter(2, 6, default=3, space="buy")
     ema_period = IntParameter(30, 70, default=50, space="buy")
-    lookback = IntParameter(1, 5, default=2, space="buy")
-    wick_tolerance = DecimalParameter(0.0001, 0.005, default=0.001, decimals=4, space="buy")
-    volume_period = IntParameter(10, 50, default=20, space="buy")
+    rsi_period = IntParameter(7, 21, default=14, space="buy")
+    rsi_max = IntParameter(60, 75, default=70, space="buy")
 
     # ── Sell params ──
-    exit_lookback = IntParameter(1, 3, default=1, space="sell")
+    rsi_exit = IntParameter(65, 80, default=75, space="sell")
 
     _logger = None
     _notifier = None
@@ -62,49 +62,39 @@ class HeikinAshiTrend(IStrategy):
 
     def _init_utils(self) -> None:
         if self._logger is None:
-            self._logger = TradeLogger(strategy_name="HeikinAshiTrend")
+            self._logger = TradeLogger(strategy_name="OBVTrendConfirm")
             self._notifier = TelegramNotifier()
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         self._init_utils()
 
-        # Pre-calc EMA pour TOUTES les valeurs
+        for p in range(self.obv_sma_period.low, self.obv_sma_period.high + 1):
+            dataframe = CommonIndicators.add_obv(dataframe, sma_period=p)
+
         for p in range(self.ema_period.low, self.ema_period.high + 1):
             dataframe = CommonIndicators.add_ema(dataframe, period=p)
 
-        # Pre-calc Volume SMA pour TOUTES les valeurs
-        for p in range(self.volume_period.low, self.volume_period.high + 1):
-            dataframe = CommonIndicators.add_volume_sma(dataframe, period=p)
-
-        # Heikin Ashi calc vectorise
-        ha_close = (dataframe["open"] + dataframe["high"] + dataframe["low"] + dataframe["close"]) / 4
-
-        # ha_open est iteratif mais optimise avec numpy
-        o = dataframe["open"].values.copy().astype(float)
-        c = ha_close.values.copy()
-        ha_o = np.empty(len(o))
-        ha_o[0] = (o[0] + c[0]) / 2
-        for i in range(1, len(o)):
-            ha_o[i] = (ha_o[i - 1] + c[i - 1]) / 2
-
-        dataframe["ha_close"] = ha_close
-        dataframe["ha_open"] = ha_o
-        dataframe["ha_high"] = dataframe[["high", "ha_open", "ha_close"]].max(axis=1)
-        dataframe["ha_low"] = dataframe[["low", "ha_open", "ha_close"]].min(axis=1)
+        for p in range(self.rsi_period.low, self.rsi_period.high + 1):
+            dataframe = CommonIndicators.add_rsi(dataframe, period=p)
 
         return dataframe
 
     def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        tol = self.wick_tolerance.value
+        obv_sma_col = f"obv_sma_{self.obv_sma_period.value}"
         ema_col = f"ema_{self.ema_period.value}"
-        lb = self.lookback.value
+        rsi_col = f"rsi_{self.rsi_period.value}"
+        rising_n = self.obv_rising.value
 
-        ema_rising = dataframe[ema_col] > dataframe[ema_col].shift(lb)
+        # OBV rising pendant N bougies
+        obv_up = dataframe["obv"] > dataframe["obv"].shift(1)
+        for i in range(2, rising_n + 1):
+            obv_up = obv_up & (dataframe["obv"].shift(i - 1) > dataframe["obv"].shift(i))
 
         conditions = (
-            (dataframe["ha_close"] > dataframe["ha_open"])
-            & ((dataframe["ha_low"] - dataframe["ha_open"]).abs() < tol * dataframe["ha_close"])
-            & ema_rising
+            (dataframe["obv"] > dataframe[obv_sma_col])
+            & obv_up
+            & (dataframe["close"] > dataframe[ema_col])
+            & (dataframe[rsi_col] < self.rsi_max.value)
             & (dataframe["volume"] > 0)
         )
 
@@ -112,15 +102,12 @@ class HeikinAshiTrend(IStrategy):
         return dataframe
 
     def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        ema_col = f"ema_{self.ema_period.value}"
-        tol = self.wick_tolerance.value
+        obv_sma_col = f"obv_sma_{self.obv_sma_period.value}"
+        rsi_col = f"rsi_{self.rsi_period.value}"
 
         conditions = (
-            (
-                (dataframe["ha_close"] < dataframe["ha_open"])
-                & ((dataframe["ha_high"] - dataframe["ha_close"]).abs() < tol * dataframe["ha_close"])
-            )
-            | (dataframe["ha_close"] < dataframe[ema_col])
+            (dataframe["obv"] < dataframe[obv_sma_col])
+            | (dataframe[rsi_col] > self.rsi_exit.value)
         )
 
         dataframe.loc[conditions, "exit_long"] = 1

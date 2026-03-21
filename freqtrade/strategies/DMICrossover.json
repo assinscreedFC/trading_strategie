@@ -1,0 +1,29 @@
+{
+  "strategy_name": "DMICrossover",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "adx_threshold": 35,
+      "dmi_period": 17
+    },
+    "roi": {
+      "0": 0.258,
+      "1526": 0.199,
+      "4223": 0.087,
+      "7004": 0
+    },
+    "stoploss": {
+      "stoploss": -0.186
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 05:34:55.741088+00:00"
+}

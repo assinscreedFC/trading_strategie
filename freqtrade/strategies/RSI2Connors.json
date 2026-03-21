@@ -1,0 +1,33 @@
+{
+  "strategy_name": "RSI2Connors",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.015,
+      "trailing_stop_positive_offset": 0.025,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "rsi_entry": 12,
+      "rsi_period": 5,
+      "sma_period": 229
+    },
+    "sell": {
+      "rsi_exit": 83
+    },
+    "roi": {
+      "0": 0.662,
+      "968": 0.25,
+      "1617": 0.037,
+      "7351": 0
+    },
+    "stoploss": {
+      "stoploss": -0.285
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-19 20:22:44.303223+00:00"
+}

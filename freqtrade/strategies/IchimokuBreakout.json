@@ -1,0 +1,34 @@
+{
+  "strategy_name": "IchimokuBreakout",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.04,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "kijun_period": 23,
+      "senkou_b_period": 64,
+      "tenkan_period": 11,
+      "volume_period": 13
+    },
+    "sell": {
+      "exit_confirm_candles": 3
+    },
+    "roi": {
+      "0": 0.511,
+      "869": 0.241,
+      "1418": 0.043,
+      "5425": 0
+    },
+    "stoploss": {
+      "stoploss": -0.049
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 23:19:09.416423+00:00"
+}

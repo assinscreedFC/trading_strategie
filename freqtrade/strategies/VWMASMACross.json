@@ -1,0 +1,29 @@
+{
+  "strategy_name": "VWMASMACross",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ma_period": 14,
+      "volume_period": 17
+    },
+    "roi": {
+      "0": 0.518,
+      "694": 0.169,
+      "1327": 0.041,
+      "5536": 0
+    },
+    "stoploss": {
+      "stoploss": -0.297
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-19 22:57:26.454816+00:00"
+}

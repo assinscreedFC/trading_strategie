@@ -1,0 +1,34 @@
+{
+  "strategy_name": "RSIRangeMeanRevert",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ema_trend": 176,
+      "entry_pct": 18,
+      "range_lookback": 77,
+      "rsi_period": 19
+    },
+    "sell": {
+      "exit_pct": 90
+    },
+    "roi": {
+      "0": 0.798,
+      "1197": 0.188,
+      "3738": 0.038,
+      "8724": 0
+    },
+    "stoploss": {
+      "stoploss": -0.297
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-21 02:16:13.974422+00:00"
+}

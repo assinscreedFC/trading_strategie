@@ -1,0 +1,11 @@
+strategy,regime,trades,profit_pct,drawdown_pct,win_rate,profit_factor,sharpe,sortino,expectancy,max_consecutive_losses,avg_duration
+BollingerMACDReversal,full_12m,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0,0:00
+CCIMomentumTrend,full_12m,186,-28.02,29.82,58.6,0.74,-1.27,-2.09,-0.15064516129032257,7,21:47:00
+FibonacciPullback,full_12m,172,-55.45,57.56,61.6,0.53,-2.27,-3.28,-0.3223837209302326,7,"1 day, 6:14:00"
+HeikinAshiTrend,full_12m,328,-47.74,48.43,58.2,0.72,-2.35,-3.19,-0.1455487804878049,9,22:59:00
+IchimokuBreakout,full_12m,127,-35.59,36.19,35.4,0.59,-1.61,-2.87,-0.28023622047244096,10,22:03:00
+KAMAAdaptiveTrend,full_12m,31,-23.37,23.37,51.6,0.29,-0.88,-2.69,-0.7538709677419355,4,"1 day, 12:39:00"
+OBVTrendConfirm,full_12m,181,-34.47,35.42,55.8,0.65,-1.7,-2.29,-0.19044198895027623,7,17:45:00
+RSIRangeMeanRevert,full_12m,95,-15.71,29.72,74.7,0.77,-0.57,-1.1,-0.16536842105263158,8,"1 day, 12:53:00"
+SuperTrendADX,full_12m,167,-18.78,30.24,69.5,0.83,-0.66,-0.94,-0.11245508982035929,6,"1 day, 7:36:00"
+VolumeProfileAccumulation,full_12m,88,-35.44,38.41,65.9,0.48,-1.34,-2.95,-0.4027272727272727,4,"1 day, 3:49:00"

@@ -1,0 +1,35 @@
+{
+  "strategy_name": "VolumeProfileAccumulation",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "atr_period": 15,
+      "rsi_entry": 35,
+      "rsi_period": 21,
+      "vwap_period": 28
+    },
+    "sell": {
+      "atr_exit_mult": 25,
+      "rsi_exit": 74
+    },
+    "roi": {
+      "0": 0.46,
+      "1121": 0.093,
+      "3566": 0.031,
+      "4707": 0
+    },
+    "stoploss": {
+      "stoploss": -0.198
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-21 02:36:20.033982+00:00"
+}

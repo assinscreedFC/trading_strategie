@@ -1,0 +1,32 @@
+{
+  "strategy_name": "TwiggsMoneyFlow",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.035,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "ema_period": 55,
+      "tmf_period": 25
+    },
+    "sell": {
+      "tmf_exit_threshold": 3
+    },
+    "roi": {
+      "0": 0.408,
+      "559": 0.118,
+      "1054": 0.032,
+      "6783": 0
+    },
+    "stoploss": {
+      "stoploss": -0.294
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-19 22:34:06.825261+00:00"
+}

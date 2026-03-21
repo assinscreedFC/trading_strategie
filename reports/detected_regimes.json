@@ -1,0 +1,216 @@
+{
+  "method": "ADX(14) + EMA(50) direction",
+  "thresholds": {
+    "adx_trend": 25,
+    "adx_range": 20,
+    "ema_direction_lookback": 5,
+    "min_regime_days": 20
+  },
+  "generated_at": "2026-03-20T04:35:37.630070",
+  "all_periods": {
+    "haussier": [
+      {
+        "start": "20250427",
+        "end": "20250531",
+        "duration_days": 35
+      },
+      {
+        "start": "20250716",
+        "end": "20250729",
+        "duration_days": 14
+      },
+      {
+        "start": "20251005",
+        "end": "20251012",
+        "duration_days": 8
+      },
+      {
+        "start": "20260113",
+        "end": "20260120",
+        "duration_days": 8
+      }
+    ],
+    "baissier": [
+      {
+        "start": "20251013",
+        "end": "20251026",
+        "duration_days": 14
+      },
+      {
+        "start": "20251106",
+        "end": "20251221",
+        "duration_days": 46
+      },
+      {
+        "start": "20260112",
+        "end": "20260112",
+        "duration_days": 1
+      },
+      {
+        "start": "20260121",
+        "end": "20260127",
+        "duration_days": 7
+      },
+      {
+        "start": "20260130",
+        "end": "20260318",
+        "duration_days": 48
+      }
+    ],
+    "stable": [
+      {
+        "start": "20250328",
+        "end": "20250424",
+        "duration_days": 28
+      },
+      {
+        "start": "20250604",
+        "end": "20250605",
+        "duration_days": 2
+      },
+      {
+        "start": "20250608",
+        "end": "20250712",
+        "duration_days": 35
+      },
+      {
+        "start": "20250806",
+        "end": "20250812",
+        "duration_days": 7
+      },
+      {
+        "start": "20250820",
+        "end": "20250831",
+        "duration_days": 12
+      },
+      {
+        "start": "20250902",
+        "end": "20251001",
+        "duration_days": 30
+      },
+      {
+        "start": "20251228",
+        "end": "20260104",
+        "duration_days": 8
+      }
+    ],
+    "transition": [
+      {
+        "start": "20250301",
+        "end": "20250327",
+        "duration_days": 27
+      },
+      {
+        "start": "20250425",
+        "end": "20250426",
+        "duration_days": 2
+      },
+      {
+        "start": "20250601",
+        "end": "20250603",
+        "duration_days": 3
+      },
+      {
+        "start": "20250606",
+        "end": "20250607",
+        "duration_days": 2
+      },
+      {
+        "start": "20250713",
+        "end": "20250715",
+        "duration_days": 3
+      },
+      {
+        "start": "20250730",
+        "end": "20250805",
+        "duration_days": 7
+      },
+      {
+        "start": "20250813",
+        "end": "20250819",
+        "duration_days": 7
+      },
+      {
+        "start": "20250901",
+        "end": "20250901",
+        "duration_days": 1
+      },
+      {
+        "start": "20251002",
+        "end": "20251004",
+        "duration_days": 3
+      },
+      {
+        "start": "20251027",
+        "end": "20251105",
+        "duration_days": 10
+      },
+      {
+        "start": "20251222",
+        "end": "20251227",
+        "duration_days": 6
+      },
+      {
+        "start": "20260105",
+        "end": "20260111",
+        "duration_days": 7
+      },
+      {
+        "start": "20260128",
+        "end": "20260129",
+        "duration_days": 2
+      }
+    ]
+  },
+  "filtered_periods": {
+    "haussier": [
+      {
+        "start": "20250427",
+        "end": "20250531",
+        "duration_days": 35
+      }
+    ],
+    "baissier": [
+      {
+        "start": "20251106",
+        "end": "20251221",
+        "duration_days": 46
+      },
+      {
+        "start": "20260130",
+        "end": "20260318",
+        "duration_days": 48
+      }
+    ],
+    "stable": [
+      {
+        "start": "20250328",
+        "end": "20250424",
+        "duration_days": 28
+      },
+      {
+        "start": "20250608",
+        "end": "20250712",
+        "duration_days": 35
+      },
+      {
+        "start": "20250902",
+        "end": "20251001",
+        "duration_days": 30
+      }
+    ],
+    "transition": [
+      {
+        "start": "20250301",
+        "end": "20250327",
+        "duration_days": 27
+      }
+    ]
+  },
+  "selected_timeranges": {
+    "haussier": "20250427-20250531",
+    "baissier": "20260130-20260318",
+    "stable": "20250608-20250712",
+    "transition": "20250301-20250327"
+  }
+}

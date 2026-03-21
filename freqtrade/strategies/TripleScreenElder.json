@@ -1,0 +1,32 @@
+{
+  "strategy_name": "TripleScreenElder",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "rsi_entry": 41,
+      "rsi_period": 11
+    },
+    "sell": {
+      "rsi_exit": 65
+    },
+    "roi": {
+      "0": 0.727,
+      "683": 0.152,
+      "1361": 0.033,
+      "6915": 0
+    },
+    "stoploss": {
+      "stoploss": -0.177
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 04:04:49.355846+00:00"
+}

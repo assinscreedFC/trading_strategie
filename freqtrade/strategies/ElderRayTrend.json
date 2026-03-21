@@ -1,0 +1,32 @@
+{
+    "strategy_name": "ElderRayTrend",
+    "params": {
+        "buy": {
+            "ema_period": 16,
+            "ema_slow": 78,
+            "rsi_max": 66,
+            "rsi_min": 40,
+            "rsi_period": 21,
+            "volume_mult": 0.9,
+            "volume_period": 50
+        },
+        "sell": {
+            "rsi_exit": 75
+        },
+        "roi": {
+            "0": 0.632,
+            "1868": 0.192,
+            "4410": 0.049,
+            "7894": 0
+        },
+        "stoploss": {
+            "stoploss": -0.094
+        },
+        "trailing": {
+            "trailing_stop": true,
+            "trailing_stop_positive": 0.204,
+            "trailing_stop_positive_offset": 0.262,
+            "trailing_only_offset_is_reached": true
+        }
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "strategy_name": "SuperTrendADX",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "adx_period": 17,
+      "adx_threshold": 34,
+      "atr_mult_x10": 26,
+      "atr_period": 18,
+      "ema_period": 230
+    },
+    "sell": {
+      "adx_exit": 10
+    },
+    "roi": {
+      "0": 0.561,
+      "1753": 0.154,
+      "4564": 0.034,
+      "5565": 0
+    },
+    "stoploss": {
+      "stoploss": -0.159
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 23:44:38.740599+00:00"
+}

@@ -1,0 +1,33 @@
+{
+  "strategy_name": "ZScoreMeanReversion",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "bb_period": 18,
+      "zscore_entry": -25,
+      "zscore_period": 29
+    },
+    "sell": {
+      "zscore_exit": 13
+    },
+    "roi": {
+      "0": 0.598,
+      "1910": 0.245,
+      "4438": 0.106,
+      "10174": 0
+    },
+    "stoploss": {
+      "stoploss": -0.085
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 06:42:46.969797+00:00"
+}

@@ -1,0 +1,32 @@
+{
+  "strategy_name": "PivotPointReversal",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "rsi_entry": 27,
+      "rsi_period": 16
+    },
+    "sell": {
+      "rsi_exit": 67
+    },
+    "roi": {
+      "0": 0.497,
+      "916": 0.151,
+      "2957": 0.038,
+      "5584": 0
+    },
+    "stoploss": {
+      "stoploss": -0.151
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 05:17:21.439332+00:00"
+}

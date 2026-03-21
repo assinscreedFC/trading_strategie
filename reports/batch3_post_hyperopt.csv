@@ -1,0 +1,21 @@
+strategy,regime,trades,profit_pct,drawdown_pct,win_rate,profit_factor,sharpe,sortino,expectancy,max_consecutive_losses,avg_duration
+BollingerMACDReversal,full_12m,3,1.87,0.0,100.0,0.0,0.4,-100.0,0.6233333333333334,0,"1 day, 5:20:00"
+BollingerMACDReversal,full_12m_post_hyperopt,7,5.16,0.0,100.0,0.0,0.99,-100.0,0.7371428571428572,0,15:26:00
+CCIMomentumTrend,full_12m,9,6.58,0.98,66.7,4.27,0.28,1.35,0.7311111111111112,1,22:40:00
+CCIMomentumTrend,full_12m_post_hyperopt,14,8.3,1.84,64.3,3.01,0.3,1.29,0.5928571428571429,2,"1 day, 3:09:00"
+FibonacciPullback,full_12m,18,15.54,0.0,100.0,0.0,2.12,-100.0,0.8633333333333333,1,"2 days, 22:00:00"
+FibonacciPullback,full_12m_post_hyperopt,20,17.59,0.17,90.0,95.84,1.71,-100.0,0.8795,1,"2 days, 1:00:00"
+HeikinAshiTrend,full_12m,328,-47.74,48.43,58.2,0.72,-2.35,-3.19,-0.1455487804878049,9,22:59:00
+HeikinAshiTrend,full_12m_post_hyperopt,197,-21.17,37.29,57.4,0.85,-0.65,-0.82,-0.10746192893401016,9,"1 day, 13:55:00"
+IchimokuBreakout,full_12m,104,-9.25,16.31,43.3,0.86,-0.35,-0.63,-0.0889423076923077,7,"1 day, 1:09:00"
+IchimokuBreakout,full_12m_post_hyperopt,104,-4.75,13.91,43.3,0.93,-0.18,-0.35,-0.04567307692307692,7,"1 day, 0:14:00"
+KAMAAdaptiveTrend,full_12m,31,-23.37,23.37,51.6,0.29,-0.88,-2.69,-0.7538709677419355,4,"1 day, 12:39:00"
+KAMAAdaptiveTrend,full_12m_post_hyperopt,7,7.36,0.0,100.0,0.0,0.6,-100.0,1.0514285714285714,0,"1 day, 10:17:00"
+OBVTrendConfirm,full_12m,179,-31.74,32.73,54.7,0.69,-1.48,-2.06,-0.17731843575418993,7,18:46:00
+OBVTrendConfirm,full_12m_post_hyperopt,10,4.66,0.21,90.0,22.64,0.77,-100.0,0.466,1,16:48:00
+RSIRangeMeanRevert,full_12m,50,6.29,17.11,74.0,1.16,0.16,0.18,0.1258,4,"4 days, 8:58:00"
+RSIRangeMeanRevert,full_12m_post_hyperopt,51,9.48,16.79,76.5,1.27,0.26,0.28,0.18588235294117647,4,"3 days, 23:41:00"
+SuperTrendADX,full_12m,41,20.29,7.35,65.9,2.68,0.62,0.3,0.4948780487804878,3,"4 days, 0:00:00"
+SuperTrendADX,full_12m_post_hyperopt,49,25.27,7.62,65.3,3.27,0.81,0.31,0.5157142857142857,3,"4 days, 12:29:00"
+VolumeProfileAccumulation,full_12m,39,14.32,19.01,71.8,1.47,0.25,0.19,0.3671794871794872,3,"3 days, 1:14:00"
+VolumeProfileAccumulation,full_12m_post_hyperopt,38,11.02,20.68,68.4,1.35,0.18,0.13,0.29,3,"3 days, 0:51:00"

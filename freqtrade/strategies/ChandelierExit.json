@@ -1,0 +1,29 @@
+{
+  "strategy_name": "ChandelierExit",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.03,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "chandelier_period": 24,
+      "ema_filter": 32
+    },
+    "roi": {
+      "0": 0.486,
+      "686": 0.227,
+      "1171": 0.042,
+      "6228": 0
+    },
+    "stoploss": {
+      "stoploss": -0.034
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-20 07:09:38.126282+00:00"
+}

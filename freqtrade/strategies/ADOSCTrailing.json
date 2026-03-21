@@ -1,0 +1,35 @@
+{
+  "strategy_name": "ADOSCTrailing",
+  "params": {
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.02,
+      "trailing_stop_positive_offset": 0.04,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    },
+    "buy": {
+      "adosc_fast": 5,
+      "adosc_lookback": 5,
+      "adosc_slow": 12,
+      "ema_period": 69
+    },
+    "sell": {
+      "atr_mult": 37,
+      "atr_period": 22
+    },
+    "roi": {
+      "0": 0.637,
+      "626": 0.068,
+      "1900": 0.036,
+      "5165": 0
+    },
+    "stoploss": {
+      "stoploss": -0.193
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2026-03-19 21:36:46.097979+00:00"
+}
