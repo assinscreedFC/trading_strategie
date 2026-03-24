@@ -1,0 +1,16 @@
+{
+  "strategy_name": "AwesomeOscillatorLite",
+  "params": {
+    "buy": {
+      "ao_fast": 6
+    },
+    "sell": {
+      "rsi_exit": 77
+    }
+  },
+  "results_metrics": {
+    "trades": 866,
+    "profit_pct": -21.75947773,
+    "loss": 1.4260664535970484
+  }
+}

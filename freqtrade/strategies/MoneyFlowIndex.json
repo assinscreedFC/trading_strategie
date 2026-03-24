@@ -8,26 +8,26 @@
       "trailing_only_offset_is_reached": true
     },
     "max_open_trades": {
-      "max_open_trades": 2
+      "max_open_trades": 8
     },
     "buy": {
-      "ema_filter": 60,
-      "mfi_entry": 29,
-      "mfi_period": 15
+      "ema_filter": 61,
+      "mfi_entry": 26,
+      "mfi_period": 16
     },
     "sell": {
-      "mfi_exit": 85
+      "mfi_exit": 79
     },
     "roi": {
-      "0": 0.539,
-      "1863": 0.186,
-      "4399": 0.036,
-      "8243": 0
+      "0": 0.495,
+      "1025": 0.252,
+      "3240": 0.11,
+      "4807": 0
     },
     "stoploss": {
-      "stoploss": -0.307
+      "stoploss": -0.348
     }
   },
   "ft_stratparam_v": 1,
-  "export_time": "2026-03-20 04:23:31.768911+00:00"
+  "export_time": "2026-03-22 02:17:09.108214+00:00"
 }

@@ -1,0 +1,16 @@
+{
+  "strategy_name": "KeltnerChannelMomentumLite",
+  "params": {
+    "buy": {
+      "kc_period": 16
+    },
+    "sell": {
+      "rsi_exit": 80
+    }
+  },
+  "results_metrics": {
+    "trades": 313,
+    "profit_pct": -6.188564615000001,
+    "loss": 0.867351352852802
+  }
+}

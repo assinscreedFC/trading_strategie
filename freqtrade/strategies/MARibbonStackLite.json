@@ -1,0 +1,7 @@
+{
+    "strategy_name": "MARibbonStackLite",
+    "params": {
+        "buy": {"ema_fast": 5, "volume_mult": 19},
+        "sell": {"exit_sensitivity": 1}
+    }
+}

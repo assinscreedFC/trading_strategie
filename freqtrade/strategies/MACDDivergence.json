@@ -1,35 +1,35 @@
 {
   "strategy_name": "MACDDivergence",
   "params": {
-    "max_open_trades": {
-      "max_open_trades": 2
-    },
-    "buy": {
-      "lookback": 7,
-      "rsi_entry": 49,
-      "rsi_period": 10,
-      "volume_mult": 0.516,
-      "volume_period": 34
-    },
-    "sell": {
-      "rsi_exit": 68
-    },
-    "roi": {
-      "0": 0.762,
-      "868": 0.156,
-      "3503": 0.111,
-      "8242": 0
-    },
-    "stoploss": {
-      "stoploss": -0.081
-    },
     "trailing": {
       "trailing_stop": true,
       "trailing_stop_positive": 0.012,
       "trailing_stop_positive_offset": 0.07,
       "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 8
+    },
+    "buy": {
+      "lookback": 11,
+      "rsi_entry": 53,
+      "rsi_period": 18,
+      "volume_mult": 1.074,
+      "volume_period": 20
+    },
+    "sell": {
+      "rsi_exit": 71
+    },
+    "roi": {
+      "0": 0.668,
+      "593": 0.167,
+      "3062": 0.081,
+      "7536": 0
+    },
+    "stoploss": {
+      "stoploss": -0.204
     }
   },
   "ft_stratparam_v": 1,
-  "export_time": "2026-03-19 03:08:49.816932+00:00"
+  "export_time": "2026-03-22 00:20:29.040495+00:00"
 }

@@ -1,0 +1,16 @@
+{
+  "strategy_name": "MoneyFlowIndexLite",
+  "params": {
+    "buy": {
+      "mfi_period": 18
+    },
+    "sell": {
+      "mfi_exit": 79
+    }
+  },
+  "results_metrics": {
+    "trades": 2,
+    "profit_pct": 0.8003452449999998,
+    "loss": -0.8078778634353109
+  }
+}

@@ -52,9 +52,6 @@ class IchimokuBreakout(IStrategy):
     senkou_b_period = IntParameter(40, 65, default=52, space="buy")
     volume_period = IntParameter(10, 50, default=20, space="buy")
 
-    # ── Sell params ──
-    exit_confirm_candles = IntParameter(1, 3, default=1, space="sell")
-
     _logger = None
     _notifier = None
 

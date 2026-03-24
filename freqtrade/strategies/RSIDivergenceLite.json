@@ -1,0 +1,11 @@
+{
+  "strategy_name": "RSIDivergenceLite",
+  "params": {
+    "buy": {
+      "rsi_period": 21
+    },
+    "sell": {
+      "rsi_exit": 68
+    }
+  }
+}

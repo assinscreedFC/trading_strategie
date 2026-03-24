@@ -50,6 +50,15 @@ class SmartMoneyConcepts(IStrategy):
     _logger = None
     _notifier = None
 
+    def __getstate__(self):
+        state = self.__dict__.copy()
+        state["_logger"] = None
+        state["_notifier"] = None
+        return state
+
+    def __setstate__(self, state):
+        self.__dict__.update(state)
+
     def _init_utils(self) -> None:
         if self._logger is None:
             self._logger = TradeLogger(strategy_name="SmartMoneyConcepts")

@@ -1,0 +1,16 @@
+{
+  "strategy_name": "TripleScreenElderLite",
+  "params": {
+    "buy": {
+      "rsi_period": 14
+    },
+    "sell": {
+      "rsi_exit": 81
+    }
+  },
+  "results_metrics": {
+    "trades": 4,
+    "profit_pct": 0.64451541,
+    "loss": -1.0241883163749712
+  }
+}

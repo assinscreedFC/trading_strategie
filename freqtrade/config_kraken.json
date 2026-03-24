@@ -1,16 +1,16 @@
 {
     "$schema": "https://schema.freqtrade.io/schema.json",
-    "_comment_exchange": "══ KRAKEN SPOT — Config EU/PSAN France ══",
-    "_comment_dryrun": "DRY_RUN activé par défaut. Kraken = 0.16% maker / 0.26% taker.",
-    "_comment_fees": "Kraken est régulé EU et enregistré PSAN en France. Frais compétitifs.",
+    "_comment_exchange": "══ KRAKEN SPOT — Paper Trading 200 USDT ══",
+    "_comment_dryrun": "DRY_RUN activé. Kraken = 0.16% maker / 0.26% taker.",
+    "_comment_strategy": "RSIDivergenceLite — rsi_period=20, rsi_exit=67",
     "trading_mode": "spot",
     "margin_mode": "",
-    "max_open_trades": 5,
+    "max_open_trades": 8,
     "stake_currency": "USDT",
-    "stake_amount": "unlimited",
-    "tradable_balance_ratio": 0.99,
+    "stake_amount": 20,
+    "tradable_balance_ratio": 0.95,
     "dry_run": true,
-    "dry_run_wallet": 10000,
+    "dry_run_wallet": 200,
     "cancel_open_orders_on_exit": false,
     "exchange": {
         "name": "kraken",
@@ -21,13 +21,7 @@
         "pair_whitelist": [
             "BTC/USDT",
             "ETH/USDT",
-            "SOL/USDT",
-            "XRP/USDT",
-            "ADA/USDT",
-            "AVAX/USDT",
-            "DOGE/USDT",
-            "DOT/USDT",
-            "MATIC/USDT"
+            "SOL/USDT"
         ],
         "pair_blacklist": [
             ".*DOWN/USDT",
@@ -64,7 +58,7 @@
         "force_entry": "market",
         "force_exit": "market",
         "stoploss": "market",
-        "stoploss_on_exchange": false,
+        "stoploss_on_exchange": true,
         "stoploss_on_exchange_interval": 60
     },
     "pairlists": [
@@ -83,7 +77,7 @@
         "listen_port": 8082,
         "verbosity": "error",
         "enable_openapi": false,
-        "jwt_secret_key": "CHANGE_ME_TO_A_RANDOM_SECRET",
+        "jwt_secret_key": "CHANGE_ME_BEFORE_LIVE",
         "CORS_origins": [],
         "username": "freqtrader",
         "password": "SuperSecretPassword"

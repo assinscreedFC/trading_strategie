@@ -1,0 +1,1 @@
+{"strategy_name":"OBVDivergenceLite","params":{"buy":{"rsi_entry":39},"sell":{"rsi_exit":76}}}

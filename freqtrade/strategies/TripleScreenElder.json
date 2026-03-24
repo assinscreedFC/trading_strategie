@@ -8,25 +8,25 @@
       "trailing_only_offset_is_reached": true
     },
     "max_open_trades": {
-      "max_open_trades": 2
+      "max_open_trades": 8
     },
     "buy": {
       "rsi_entry": 41,
-      "rsi_period": 11
+      "rsi_period": 19
     },
     "sell": {
-      "rsi_exit": 65
+      "rsi_exit": 66
     },
     "roi": {
-      "0": 0.727,
-      "683": 0.152,
-      "1361": 0.033,
-      "6915": 0
+      "0": 0.693,
+      "523": 0.267,
+      "2119": 0.104,
+      "2710": 0
     },
     "stoploss": {
-      "stoploss": -0.177
+      "stoploss": -0.232
     }
   },
   "ft_stratparam_v": 1,
-  "export_time": "2026-03-20 04:04:49.355846+00:00"
+  "export_time": "2026-03-22 02:08:01.663617+00:00"
 }

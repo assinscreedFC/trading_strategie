@@ -1,0 +1,16 @@
+{
+  "strategy_name": "BollingerMACDReversalLite",
+  "params": {
+    "buy": {
+      "bb_period": 18
+    },
+    "sell": {
+      "rsi_exit": 63
+    }
+  },
+  "results_metrics": {
+    "trades": 131,
+    "profit_pct": -0.76484368,
+    "loss": 0.22329880321746615
+  }
+}

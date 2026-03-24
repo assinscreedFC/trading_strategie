@@ -1,0 +1,16 @@
+{
+  "strategy_name": "ZScoreMeanReversionLite",
+  "params": {
+    "buy": {
+      "zscore_period": 29
+    },
+    "sell": {
+      "zscore_exit": 18
+    }
+  },
+  "results_metrics": {
+    "trades": 75,
+    "profit_pct": -0.48424702000000025,
+    "loss": 0.13328688954941353
+  }
+}

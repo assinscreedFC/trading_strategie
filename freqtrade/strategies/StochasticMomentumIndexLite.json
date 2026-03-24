@@ -1,0 +1,16 @@
+{
+  "strategy_name": "StochasticMomentumIndexLite",
+  "params": {
+    "buy": {
+      "k_period": 12
+    },
+    "sell": {
+      "stoch_overbought": 70
+    }
+  },
+  "results_metrics": {
+    "trades": 33,
+    "profit_pct": 0.6205815949999997,
+    "loss": -0.13606527420818804
+  }
+}

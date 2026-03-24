@@ -11,13 +11,13 @@
       "max_open_trades": 2
     },
     "buy": {
-      "kijun_period": 23,
-      "senkou_b_period": 64,
-      "tenkan_period": 11,
-      "volume_period": 13
+      "kijun_period": 24,
+      "senkou_b_period": 65,
+      "tenkan_period": 12,
+      "volume_period": 14
     },
     "sell": {
-      "exit_confirm_candles": 3
+      "exit_confirm_candles": 4
     },
     "roi": {
       "0": 0.511,

@@ -1,0 +1,1 @@
+{"strategy_name":"MACDDivergenceLite","params":{"buy":{"rsi_entry":30},"sell":{"rsi_exit":75}}}

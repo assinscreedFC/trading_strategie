@@ -1,0 +1,11 @@
+{
+  "strategy_name": "EMATripleCrossLite",
+  "params": {
+    "buy": {
+      "ema_fast": 11
+    },
+    "sell": {
+      "rsi_exit": 74
+    }
+  }
+}

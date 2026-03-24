@@ -1,0 +1,16 @@
+{
+  "strategy_name": "ChoppinessBreakoutLite",
+  "params": {
+    "buy": {
+      "chop_period": 14
+    },
+    "sell": {
+      "chop_exit": 70
+    }
+  },
+  "results_metrics": {
+    "trades": 304,
+    "profit_pct": 1.5034265299999996,
+    "loss": 0.004529943173039418
+  }
+}

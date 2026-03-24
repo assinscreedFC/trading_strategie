@@ -1,0 +1,16 @@
+{
+  "strategy_name": "CCIMomentumTrendLite",
+  "params": {
+    "buy": {
+      "cci_period": 26
+    },
+    "sell": {
+      "cci_exit": 14
+    }
+  },
+  "results_metrics": {
+    "trades": 731,
+    "profit_pct": -7.498831755,
+    "loss": 0.6757841219351542
+  }
+}

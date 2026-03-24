@@ -1,0 +1,16 @@
+{
+  "strategy_name": "SuperTrendADXLite",
+  "params": {
+    "buy": {
+      "atr_period": 11
+    },
+    "sell": {
+      "adx_exit": 24
+    }
+  },
+  "results_metrics": {
+    "trades": 878,
+    "profit_pct": -24.980324329999995,
+    "loss": 1.5035945818169756
+  }
+}

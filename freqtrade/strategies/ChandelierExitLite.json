@@ -1,0 +1,16 @@
+{
+  "strategy_name": "ChandelierExitLite",
+  "params": {
+    "buy": {
+      "chandelier_period": 23
+    },
+    "sell": {
+      "atr_mult_exit_x10": 40
+    }
+  },
+  "results_metrics": {
+    "trades": 206,
+    "profit_pct": -0.55409899,
+    "loss": 0.19967924148667882
+  }
+}

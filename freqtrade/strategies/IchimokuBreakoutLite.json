@@ -1,0 +1,7 @@
+{
+    "strategy_name": "IchimokuBreakoutLite",
+    "params": {
+        "buy": {"kijun_period": 25, "tenkan_period": 10},
+        "sell": {"exit_lookback": 3}
+    }
+}

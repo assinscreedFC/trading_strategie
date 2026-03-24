@@ -1,0 +1,16 @@
+{
+  "strategy_name": "DMICrossoverLite",
+  "params": {
+    "buy": {
+      "dmi_period": 16
+    },
+    "sell": {
+      "adx_exit": 30
+    }
+  },
+  "results_metrics": {
+    "trades": 49,
+    "profit_pct": -1.7958004449999996,
+    "loss": 0.6033033561609578
+  }
+}

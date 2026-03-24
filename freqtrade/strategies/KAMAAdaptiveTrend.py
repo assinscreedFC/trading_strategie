@@ -44,9 +44,6 @@ class KAMAAdaptiveTrend(IStrategy):
     adx_period = IntParameter(10, 20, default=14, space="buy")
     adx_threshold = IntParameter(15, 30, default=20, space="buy")
 
-    # ── Sell params ──
-    exit_confirm_candles = IntParameter(1, 3, default=1, space="sell")
-
     _logger = None
     _notifier = None
 

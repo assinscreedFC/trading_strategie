@@ -1,36 +1,36 @@
 {
   "strategy_name": "VolatilityBreakout",
   "params": {
-    "max_open_trades": {
-      "max_open_trades": 2
-    },
-    "buy": {
-      "atr_period": 19,
-      "bb_period": 26,
-      "bb_std": 3.0,
-      "volume_mult": 1.9,
-      "volume_period": 19,
-      "width_entry_pct": 21
-    },
-    "sell": {
-      "width_exit_pct": 44
-    },
-    "roi": {
-      "0": 0.282,
-      "480": 0.162,
-      "731": 0.069,
-      "1673": 0
-    },
-    "stoploss": {
-      "stoploss": -0.205
-    },
     "trailing": {
       "trailing_stop": true,
       "trailing_stop_positive": 0.011,
       "trailing_stop_positive_offset": 0.102,
       "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 8
+    },
+    "buy": {
+      "atr_period": 11,
+      "bb_period": 25,
+      "bb_std": 2.9,
+      "volume_mult": 2.0,
+      "volume_period": 20,
+      "width_entry_pct": 29
+    },
+    "sell": {
+      "width_exit_pct": 58
+    },
+    "roi": {
+      "0": 0.369,
+      "141": 0.089,
+      "403": 0.032,
+      "1680": 0
+    },
+    "stoploss": {
+      "stoploss": -0.298
     }
   },
   "ft_stratparam_v": 1,
-  "export_time": "2026-03-19 04:52:33.736430+00:00"
+  "export_time": "2026-03-22 01:35:50.515718+00:00"
 }

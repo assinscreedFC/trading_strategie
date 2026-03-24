@@ -5,13 +5,13 @@
       "max_open_trades": 2
     },
     "buy": {
-      "ema_1": 5,
-      "ema_2": 16,
-      "ema_3": 35,
-      "ema_4": 41,
-      "ema_5": 50,
-      "volume_mult": 1.7,
-      "volume_period": 18
+      "ema_1": 6,
+      "ema_2": 17,
+      "ema_3": 36,
+      "ema_4": 42,
+      "ema_5": 51,
+      "volume_mult": 2.7,
+      "volume_period": 19
     },
     "roi": {
       "0": 0.873,
